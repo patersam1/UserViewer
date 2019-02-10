@@ -10,10 +10,42 @@ import UIKit
 
 class AddUserVC: UIViewController {
 
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet var betweenConstraints: [NSLayoutConstraint]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if (UIDevice.current.orientation.isLandscape){
+            //change constraint to 20
+            topConstraint.constant = 40
+            for con in betweenConstraints{
+                con.constant /= 2
+            }
+            print("device is landscape")
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if (UIDevice.current.orientation.isLandscape){
+            //change constraint to 20
+            topConstraint.constant = 40
+            for con in betweenConstraints{
+                con.constant /= 2
+                print(con)
+            }
+            print("device is landscape")
+        }else{
+            //change constraint to 120
+            topConstraint.constant = 120
+            for con in betweenConstraints{
+                con.constant *= 2
+            }
+            print("device is Potrate")
+        }
+        view.layoutIfNeeded()
     }
     
 
