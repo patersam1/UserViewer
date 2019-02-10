@@ -140,6 +140,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAW-bk-LIf">
                                 <rect key="frame" x="182.5" y="576" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="SubmitUser:" destination="b0Q-oO-Erw" eventType="touchUpInside" id="0Zy-lG-v5H"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,6 +174,10 @@
                         <viewLayoutGuide key="safeArea" id="DeZ-7t-n7f"/>
                     </view>
                     <connections>
+                        <outlet property="ageTextField" destination="CzO-2A-j8E" id="wja-Nt-dMZ"/>
+                        <outlet property="emailTextField" destination="mSg-1U-ecx" id="9A0-sk-TWQ"/>
+                        <outlet property="fNameTextField" destination="09Q-gg-zLx" id="dHn-vh-hnP"/>
+                        <outlet property="lNameTextField" destination="bQm-hS-hCD" id="tit-CA-EUJ"/>
                         <outlet property="topConstraint" destination="QiK-Dw-SGX" id="lxM-P0-0ty"/>
                         <outletCollection property="betweenConstraints" destination="VFS-xT-i5U" collectionClass="NSMutableArray" id="K3e-E0-hWc"/>
                         <outletCollection property="betweenConstraints" destination="D6M-3v-5BH" collectionClass="NSMutableArray" id="CTb-K6-aWd"/>
@@ -188,7 +195,7 @@
         <!--Navigation Controller-->
         <scene sceneID="IkL-QC-4wM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DaR-bw-xcH" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavController" automaticallyAdjustsScrollViewInsets="NO" id="DaR-bw-xcH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="paP-GC-ETt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

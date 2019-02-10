@@ -13,6 +13,10 @@ class AddUserVC: UIViewController {
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet var betweenConstraints: [NSLayoutConstraint]!
     
+    @IBOutlet weak var fNameTextField: UITextField!
+    @IBOutlet weak var lNameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,6 @@ class AddUserVC: UIViewController {
             for con in betweenConstraints{
                 con.constant /= 2
             }
-            print("device is landscape")
         }
     }
     
@@ -34,29 +37,30 @@ class AddUserVC: UIViewController {
             topConstraint.constant = 40
             for con in betweenConstraints{
                 con.constant /= 2
-                print(con)
             }
-            print("device is landscape")
         }else{
             //change constraint to 120
             topConstraint.constant = 120
             for con in betweenConstraints{
                 con.constant *= 2
             }
-            print("device is Potrate")
         }
         view.layoutIfNeeded()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func SubmitUser(_ sender: Any) {
+        //submit to model
+        if(!Model.instance.addUser(fName: fNameTextField.text!, lName: lNameTextField.text!, age: ageTextField.text!, email: emailTextField.text!)){
+            //add user failed
+        }
+        //pop vc from navigation controller
+        let navController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NavController") as? UINavigationController
+        print(navController?.viewControllers)
+        navController?.popViewController(animated: true)
+        print(navController?.viewControllers)
+        
     }
-    */
+    
 
 }
