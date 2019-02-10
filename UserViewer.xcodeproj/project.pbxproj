@@ -14,6 +14,10 @@
 		ED8F97B8220FDCE7008EAF2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8F97B6220FDCE7008EAF2B /* LaunchScreen.storyboard */; };
 		ED8F97C3220FDCE7008EAF2B /* UserViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97C2220FDCE7008EAF2B /* UserViewerTests.swift */; };
 		ED8F97CE220FDCE7008EAF2B /* UserViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97CD220FDCE7008EAF2B /* UserViewerUITests.swift */; };
+		ED8F97DC220FE050008EAF2B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97DB220FE050008EAF2B /* MainVC.swift */; };
+		ED8F97E0220FE0B6008EAF2B /* ViewUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97DD220FE0B6008EAF2B /* ViewUsersVC.swift */; };
+		ED8F97E1220FE0B6008EAF2B /* AddUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97DE220FE0B6008EAF2B /* AddUserVC.swift */; };
+		ED8F97E2220FE0B6008EAF2B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		ED8F97C9220FDCE7008EAF2B /* UserViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8F97CD220FDCE7008EAF2B /* UserViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewerUITests.swift; sourceTree = "<group>"; };
 		ED8F97CF220FDCE7008EAF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED8F97DB220FE050008EAF2B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = Scripts/MainVC.swift; sourceTree = "<group>"; };
+		ED8F97DD220FE0B6008EAF2B /* ViewUsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewUsersVC.swift; path = UserViewer/Scripts/ViewUsersVC.swift; sourceTree = "<group>"; };
+		ED8F97DE220FE0B6008EAF2B /* AddUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddUserVC.swift; path = UserViewer/Scripts/AddUserVC.swift; sourceTree = "<group>"; };
+		ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = UserViewer/Scripts/SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,9 @@
 				ED8F97C1220FDCE7008EAF2B /* UserViewerTests */,
 				ED8F97CC220FDCE7008EAF2B /* UserViewerUITests */,
 				ED8F97AB220FDCE6008EAF2B /* Products */,
+				ED8F97DE220FE0B6008EAF2B /* AddUserVC.swift */,
+				ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */,
+				ED8F97DD220FE0B6008EAF2B /* ViewUsersVC.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +111,7 @@
 				ED8F97AD220FDCE6008EAF2B /* AppDelegate.swift */,
 				ED8F97AF220FDCE6008EAF2B /* ViewController.swift */,
 				ED8F97B1220FDCE6008EAF2B /* Main.storyboard */,
+				ED8F97DB220FE050008EAF2B /* MainVC.swift */,
 				ED8F97B4220FDCE7008EAF2B /* Assets.xcassets */,
 				ED8F97B6220FDCE7008EAF2B /* LaunchScreen.storyboard */,
 				ED8F97B9220FDCE7008EAF2B /* Info.plist */,
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8F97E1220FE0B6008EAF2B /* AddUserVC.swift in Sources */,
 				ED8F97B0220FDCE6008EAF2B /* ViewController.swift in Sources */,
+				ED8F97DC220FE050008EAF2B /* MainVC.swift in Sources */,
+				ED8F97E0220FE0B6008EAF2B /* ViewUsersVC.swift in Sources */,
 				ED8F97AE220FDCE6008EAF2B /* AppDelegate.swift in Sources */,
+				ED8F97E2220FE0B6008EAF2B /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
