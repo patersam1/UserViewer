@@ -50,16 +50,43 @@ class AddUserVC: UIViewController {
     
 
     @IBAction func SubmitUser(_ sender: Any) {
+        var errorCount = 0
+        errorCount = textFieldCheck(fNameTextField, errorCount: errorCount)
+        errorCount = textFieldCheck(lNameTextField, errorCount: errorCount)
+        errorCount = textFieldCheck(ageTextField, errorCount: errorCount)
+        errorCount = textFieldCheck(emailTextField, errorCount: errorCount)
+        if (errorCount > 0){
+            //stops the submission if something is missing
+             return
+        }
+        
         //submit to model
         if(!Model.instance.addUser(fName: fNameTextField.text!, lName: lNameTextField.text!, age: ageTextField.text!, email: emailTextField.text!)){
             //add user failed
         }
         //pop vc from navigation controller
-        let navController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "NavController") as? UINavigationController
-        print(navController?.viewControllers)
-        navController?.popViewController(animated: true)
-        print(navController?.viewControllers)
+        let navController = self.navigationController!
+        print(navController.viewControllers)
+        self.dismiss(animated: true, completion: nil)
+        navController.popViewController(animated: true)
         
+        print(navController.viewControllers)
+        
+    }
+    
+    func textFieldCheck(_ textField: UITextField, errorCount: Int)-> Int{
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.red,
+        ]
+        if (textField.text == ""){
+            textField.attributedPlaceholder =
+                NSAttributedString(string: "*", attributes: attributes)
+            return errorCount + 1
+        }else{
+            textField.placeholder = ""
+        }
+        
+       return errorCount
     }
     
 
