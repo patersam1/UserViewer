@@ -33,6 +33,16 @@ class ViewUsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         cell.setCell(name: "\(personData[0]) \(personData[1])", email: personData[3])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ViewRowSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! AddUserVC
+        vc.isViewOnlyKey = keyArray![table.indexPathForSelectedRow!.item]
+        
+    }
 
     /*
     // MARK: - Navigation

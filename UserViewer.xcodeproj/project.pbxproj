@@ -20,6 +20,7 @@
 		ED8F97E2220FE0B6008EAF2B /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */; };
 		ED8F97E4220FEF4B008EAF2B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97E3220FEF4B008EAF2B /* Model.swift */; };
 		EDBD54E82219252900AE69CE /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD54E72219252900AE69CE /* TableCell.swift */; };
+		EDBD54EA22192E8600AE69CE /* SelectTableRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD54E922192E8600AE69CE /* SelectTableRowVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = UserViewer/Scripts/SettingsVC.swift; sourceTree = "<group>"; };
 		ED8F97E3220FEF4B008EAF2B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Scripts/Model.swift; sourceTree = "<group>"; };
 		EDBD54E72219252900AE69CE /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		EDBD54E922192E8600AE69CE /* SelectTableRowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectTableRowVC.swift; path = UserViewer/Scripts/SelectTableRowVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				ED8F97DE220FE0B6008EAF2B /* AddUserVC.swift */,
 				ED8F97DF220FE0B6008EAF2B /* SettingsVC.swift */,
 				ED8F97DD220FE0B6008EAF2B /* ViewUsersVC.swift */,
+				EDBD54E922192E8600AE69CE /* SelectTableRowVC.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8F97E4220FEF4B008EAF2B /* Model.swift in Sources */,
+				EDBD54EA22192E8600AE69CE /* SelectTableRowVC.swift in Sources */,
 				ED8F97E1220FE0B6008EAF2B /* AddUserVC.swift in Sources */,
 				EDBD54E82219252900AE69CE /* TableCell.swift in Sources */,
 				ED8F97B0220FDCE6008EAF2B /* ViewController.swift in Sources */,

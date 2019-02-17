@@ -179,6 +179,7 @@
                         <outlet property="fNameTextField" destination="09Q-gg-zLx" id="dHn-vh-hnP"/>
                         <outlet property="lNameTextField" destination="bQm-hS-hCD" id="tit-CA-EUJ"/>
                         <outlet property="topConstraint" destination="QiK-Dw-SGX" id="lxM-P0-0ty"/>
+                        <outlet property="updateButton" destination="YAW-bk-LIf" id="89r-js-1Qb"/>
                         <outletCollection property="betweenConstraints" destination="VFS-xT-i5U" collectionClass="NSMutableArray" id="K3e-E0-hWc"/>
                         <outletCollection property="betweenConstraints" destination="D6M-3v-5BH" collectionClass="NSMutableArray" id="CTb-K6-aWd"/>
                         <outletCollection property="betweenConstraints" destination="OCc-By-oBF" collectionClass="NSMutableArray" id="vZ8-ZU-J2m"/>
@@ -272,11 +273,27 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="Cmo-Ap-K5C" id="iuy-yD-RaG"/>
+                        <segue destination="b0Q-oO-Erw" kind="show" identifier="ViewRowSegue" id="dNg-ij-45D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0H-Fa-krS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="-140.625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W8G-KF-u8u">
+            <objects>
+                <viewController id="EyG-zi-hrG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OjM-em-A22">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SUj-nC-bEC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2GN-us-Wl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="-149"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="TYc-Ag-K4s">
@@ -294,4 +311,7 @@
             <point key="canvasLocation" x="870" y="163"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dNg-ij-45D"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,7 @@ class TableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedCell))
+        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(tappedCell))
         addGestureRecognizer(tapGesture)
     }
 

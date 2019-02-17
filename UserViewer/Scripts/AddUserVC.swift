@@ -18,6 +18,10 @@ class AddUserVC: UIViewController {
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var updateButton: UIButton!
+    
+    var isViewOnlyKey = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +32,10 @@ class AddUserVC: UIViewController {
                 con.constant /= 2
             }
         }
+        if (isViewOnlyKey != ""){
+            ViewUserOnly(key: isViewOnlyKey)
+        }
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -50,6 +58,7 @@ class AddUserVC: UIViewController {
     
 
     @IBAction func SubmitUser(_ sender: Any) {
+        print("------submitUser----")
         var errorCount = 0
         errorCount = textFieldCheck(fNameTextField, errorCount: errorCount)
         errorCount = textFieldCheck(lNameTextField, errorCount: errorCount)
@@ -89,5 +98,34 @@ class AddUserVC: UIViewController {
        return errorCount
     }
     
+    func ViewUserOnly(key:String){
+        let personData = Model.instance.userDic[key]!
+        //change button, title label and lock text fields
+        var fieldIndex = 0
+        for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
+            textField?.isUserInteractionEnabled = false
+            textField?.text = personData[fieldIndex]
+            fieldIndex += 1
+        }
+        updateButton.setTitle("Edit", for: .normal)
+        updateButton.removeTarget(nil, action: nil, for: .allEvents)
+        updateButton.addTarget(self, action: #selector(EnableEditing), for: .touchUpInside)
+        
+    }
+    
+    @objc func EnableEditing(){
+        print("------EnableEditing----")
+        for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
+            textField?.isUserInteractionEnabled = true
+        }
+        updateButton.setTitle("Update", for: .normal)
+        updateButton.removeTarget(nil, action: nil, for: .allEvents)
+        updateButton.addTarget(self, action: #selector(updateUser), for: .touchUpInside)
+    }
+    
+    @objc func updateUser(){
+        Model.instance.userDic.removeValue(forKey: isViewOnlyKey)
+        SubmitUser(self)
+    }
 
 }
