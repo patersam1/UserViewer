@@ -8,14 +8,29 @@
 
 import UIKit
 
-class ViewUsersVC: UIViewController {
+class ViewUsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var table: UITableView!
+    var keyArray: [String]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        table.delegate = self
+        table.dataSource = self
+        keyArray = Array(Model.instance.userDic.keys)
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Model.instance.userDic.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableCell
+        let personData = Model.instance.userDic[keyArray![indexPath.item]]!
+        cell.setCell(name: "\(personData[0]) \(personData[1])", email: personData[3])
+        return cell
+    }
 
     /*
     // MARK: - Navigation
