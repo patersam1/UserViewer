@@ -18,6 +18,8 @@ class ViewUsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         table.delegate = self
         table.dataSource = self
         keyArray = Array(Model.instance.userDic.keys)
+        
+        
         // Do any additional setup after loading the view.
     }
     
