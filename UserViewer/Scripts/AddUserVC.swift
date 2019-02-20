@@ -20,6 +20,8 @@ class AddUserVC: UIViewController {
     
     @IBOutlet weak var updateButton: UIButton!
     
+    @IBOutlet weak var pageTitle: UILabel!
+    
     var isViewOnlyKey = ""
     
     override func viewDidLoad() {
@@ -75,11 +77,9 @@ class AddUserVC: UIViewController {
         }
         //pop vc from navigation controller
         let navController = self.navigationController!
-        print(navController.viewControllers)
         self.dismiss(animated: true, completion: nil)
         navController.popViewController(animated: true)
-        
-        print(navController.viewControllers)
+
         
     }
     
@@ -105,8 +105,10 @@ class AddUserVC: UIViewController {
         for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
             textField?.isUserInteractionEnabled = false
             textField?.text = personData[fieldIndex]
+            textField?.borderStyle = .none
             fieldIndex += 1
         }
+        pageTitle.text = "View User"
         updateButton.setTitle("Edit", for: .normal)
         updateButton.removeTarget(nil, action: nil, for: .allEvents)
         updateButton.addTarget(self, action: #selector(EnableEditing), for: .touchUpInside)
@@ -118,6 +120,7 @@ class AddUserVC: UIViewController {
         for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
             textField?.isUserInteractionEnabled = true
         }
+        pageTitle.text = "Edit User"
         updateButton.setTitle("Update", for: .normal)
         updateButton.removeTarget(nil, action: nil, for: .allEvents)
         updateButton.addTarget(self, action: #selector(updateUser), for: .touchUpInside)

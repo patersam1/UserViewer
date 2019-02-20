@@ -178,6 +178,7 @@
                         <outlet property="emailTextField" destination="mSg-1U-ecx" id="9A0-sk-TWQ"/>
                         <outlet property="fNameTextField" destination="09Q-gg-zLx" id="dHn-vh-hnP"/>
                         <outlet property="lNameTextField" destination="bQm-hS-hCD" id="tit-CA-EUJ"/>
+                        <outlet property="pageTitle" destination="RSH-g0-duF" id="d9P-GB-IK9"/>
                         <outlet property="topConstraint" destination="QiK-Dw-SGX" id="lxM-P0-0ty"/>
                         <outlet property="updateButton" destination="YAW-bk-LIf" id="89r-js-1Qb"/>
                         <outletCollection property="betweenConstraints" destination="VFS-xT-i5U" collectionClass="NSMutableArray" id="K3e-E0-hWc"/>
