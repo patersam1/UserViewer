@@ -99,12 +99,13 @@ class AddUserVC: UIViewController {
     }
     
     func ViewUserOnly(key:String){
-        let personData = Model.instance.userDic[key]!
+        let personData = Model.instance.users[key]!
+        let personDataArray = [personData.firstName, personData.lastName, personData.age, personData.email]
         //change button, title label and lock text fields
         var fieldIndex = 0
         for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
             textField?.isUserInteractionEnabled = false
-            textField?.text = personData[fieldIndex]
+            textField?.text = personDataArray[fieldIndex]
             textField?.borderStyle = .none
             fieldIndex += 1
         }
@@ -127,7 +128,7 @@ class AddUserVC: UIViewController {
     }
     
     @objc func updateUser(){
-        Model.instance.userDic.removeValue(forKey: isViewOnlyKey)
+        Model.instance.users.removeValue(forKey: isViewOnlyKey)
         SubmitUser(self)
     }
 

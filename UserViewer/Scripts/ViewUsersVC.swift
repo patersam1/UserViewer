@@ -17,7 +17,7 @@ class ViewUsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
-        keyArray = Array(Model.instance.userDic.keys)
+        keyArray = Array(Model.instance.users.keys)
         
         
         // Do any additional setup after loading the view.
@@ -26,17 +26,17 @@ class ViewUsersVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         table.reloadData()
-        keyArray = Array(Model.instance.userDic.keys)
+        keyArray = Array(Model.instance.users.keys)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.instance.userDic.count
+        return Model.instance.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableCell
-        let personData = Model.instance.userDic[keyArray![indexPath.item]]!
-        cell.setCell(name: "\(personData[0]) \(personData[1])", email: personData[3])
+        let personData = Model.instance.users[keyArray![indexPath.item]]!
+        cell.setCell(name: "\(personData.firstName) \(personData.lastName)", email: personData.email)
         return cell
     }
     

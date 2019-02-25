@@ -21,6 +21,7 @@
 		ED8F97E4220FEF4B008EAF2B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8F97E3220FEF4B008EAF2B /* Model.swift */; };
 		EDBD54E82219252900AE69CE /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD54E72219252900AE69CE /* TableCell.swift */; };
 		EDBD54EA22192E8600AE69CE /* SelectTableRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD54E922192E8600AE69CE /* SelectTableRowVC.swift */; };
+		EDEA2EB32223DE200063845A /* TestUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = EDEA2EB22223DE200063845A /* TestUsers.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		ED8F97E3220FEF4B008EAF2B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Scripts/Model.swift; sourceTree = "<group>"; };
 		EDBD54E72219252900AE69CE /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		EDBD54E922192E8600AE69CE /* SelectTableRowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectTableRowVC.swift; path = UserViewer/Scripts/SelectTableRowVC.swift; sourceTree = "<group>"; };
+		EDEA2EB22223DE200063845A /* TestUsers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestUsers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		ED8F97A1220FDCE6008EAF2B = {
 			isa = PBXGroup;
 			children = (
+				EDEA2EB22223DE200063845A /* TestUsers.json */,
 				ED8F97AC220FDCE6008EAF2B /* UserViewer */,
 				ED8F97C1220FDCE7008EAF2B /* UserViewerTests */,
 				ED8F97CC220FDCE7008EAF2B /* UserViewerUITests */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEA2EB32223DE200063845A /* TestUsers.json in Resources */,
 				ED8F97B8220FDCE7008EAF2B /* LaunchScreen.storyboard in Resources */,
 				ED8F97B5220FDCE7008EAF2B /* Assets.xcassets in Resources */,
 				ED8F97B3220FDCE6008EAF2B /* Main.storyboard in Resources */,
