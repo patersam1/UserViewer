@@ -106,7 +106,7 @@ class AddUserVC: UIViewController {
         for textField in [fNameTextField, lNameTextField, ageTextField, emailTextField]{
             textField?.isUserInteractionEnabled = false
             textField?.text = personDataArray[fieldIndex]
-            textField?.borderStyle = .none
+//            textField?.borderStyle = .none
             fieldIndex += 1
         }
         pageTitle.text = "View User"
