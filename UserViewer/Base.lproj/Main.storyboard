@@ -47,6 +47,9 @@
                                         <rect key="frame" x="0.0" y="162" width="144" height="46"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsn-rk-oRb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -306,9 +309,81 @@
                     <view key="view" contentMode="scaleToFill" id="gQJ-io-OQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drt-fl-81Q">
+                                <rect key="frame" x="57" y="253" width="300" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iy-Pa-VWR">
+                                        <rect key="frame" x="91" y="17" width="118" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Xv9-kH-aKT">
+                                        <rect key="frame" x="50" y="111" width="200" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-6v-fh9">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2W1-1P-xTW"/>
+                                                    <constraint firstAttribute="width" constant="200" id="eKp-F3-DT1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Auto populate data"/>
+                                                <connections>
+                                                    <action selector="AutoPopData:" destination="JXE-Ba-00Z" eventType="touchUpInside" id="e0i-GO-YCg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rm2-S5-gFb">
+                                                <rect key="frame" x="0.0" y="69" width="200" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OGe-5J-qY8"/>
+                                                    <constraint firstAttribute="width" constant="200" id="TPK-NS-af3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Clear data"/>
+                                                <connections>
+                                                    <action selector="ClearData:" destination="JXE-Ba-00Z" eventType="touchUpInside" id="ZzR-ld-ztq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73E-3r-mEJ">
+                                                <rect key="frame" x="0.0" y="138" width="200" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="IPd-le-5XV"/>
+                                                    <constraint firstAttribute="width" constant="200" id="LKX-CY-jjy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Close settings"/>
+                                                <connections>
+                                                    <action selector="CloseSettings:" destination="JXE-Ba-00Z" eventType="touchUpInside" id="TII-Rd-IDV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6iy-Pa-VWR" firstAttribute="centerX" secondItem="Drt-fl-81Q" secondAttribute="centerX" id="7Wk-e9-4c4"/>
+                                    <constraint firstAttribute="width" constant="300" id="Dfa-Oo-Tog"/>
+                                    <constraint firstItem="6iy-Pa-VWR" firstAttribute="top" secondItem="Drt-fl-81Q" secondAttribute="top" constant="17" id="Jpi-SW-XlX"/>
+                                    <constraint firstAttribute="height" constant="400" id="SSa-Ei-mbr"/>
+                                    <constraint firstItem="Xv9-kH-aKT" firstAttribute="centerX" secondItem="Drt-fl-81Q" secondAttribute="centerX" id="jFf-7m-P3b"/>
+                                    <constraint firstItem="Xv9-kH-aKT" firstAttribute="centerY" secondItem="Drt-fl-81Q" secondAttribute="centerY" id="lkP-V2-dP5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20867703045685282" green="0.20867703045685282" blue="0.20867703045685282" alpha="0.48753210616438358" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Drt-fl-81Q" firstAttribute="centerX" secondItem="6Xy-R3-Znq" secondAttribute="centerX" id="F0M-tI-5my"/>
+                            <constraint firstItem="Drt-fl-81Q" firstAttribute="centerY" secondItem="6Xy-R3-Znq" secondAttribute="centerY" id="XPW-2f-T2p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Xy-R3-Znq"/>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="Drt-fl-81Q" id="WcC-Vv-tA5"/>
+                        <outlet property="xBackgroundConstraint" destination="F0M-tI-5my" id="rlU-kI-Qr0"/>
+                        <outlet property="yBackgroundConstraint" destination="XPW-2f-T2p" id="8Iz-6w-i0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLf-2K-HmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

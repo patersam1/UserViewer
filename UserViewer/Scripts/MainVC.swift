@@ -12,19 +12,17 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Model.instance.loadUsersFromJSON()
+        guard let docUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
+        let fileUrl = docUrl.appendingPathComponent("Users.json")
+        Model.instance.loadUsersFromJSON(fileUrl: fileUrl)
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openSettings(_ sender: Any){
+        let settingsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
+        self.addChild(settingsVC)
+        settingsVC.view.frame = self.view.frame
+        self.view.addSubview(settingsVC.view)
+        
     }
-    */
-
 }

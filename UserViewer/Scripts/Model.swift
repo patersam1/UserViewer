@@ -49,10 +49,9 @@ class Model{
         return 0
     }
     
-    func loadUsersFromJSON(){
+    func loadUsersFromJSON(fileUrl: URL){
         
-        guard let docUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
-        let fileUrl = docUrl.appendingPathComponent("Users.json")
+      
         
         do{
             let data = try Data(contentsOf: fileUrl)
